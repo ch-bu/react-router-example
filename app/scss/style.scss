@@ -1,7 +1,27 @@
 body {
-  background-color: purple;
+  margin: 0;
+  background-color: #e9edde;
 }
 
 #application {
-  background-color: green;
+  nav {
+    background-color: #272932;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    height: 60px;
+
+    a {
+      color: #fff;
+      font-size: 1.6rem;
+      padding: 10px;
+      text-decoration: none;
+      align-self: center;
+
+      &:hover {
+        color: #e7e247;
+      }
+    }
+  }
 }

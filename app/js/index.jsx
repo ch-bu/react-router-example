@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, IndexRoute} from 'react-router-dom';
 import AppIndex from './components/index.jsx';
 import About from './components/about.jsx';
+import Color from './components/color.jsx';
 import styles from '../scss/style.scss'
 
 class Application extends React.Component {
   constructor(props) {
     super(props);
-    //
   }
 
   render() {
@@ -18,6 +18,7 @@ class Application extends React.Component {
         <Switch>
           <Route exact path='/' component={AppIndex} />
           <Route path='/about' component={About} />
+          <Route path='/color' component={Color} />
         </Switch>
       </div>
     )

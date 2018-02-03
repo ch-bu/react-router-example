@@ -8,9 +8,9 @@ class Header extends React.Component {
   render() {
     return (
       <nav>
+        <a href="/">Index</a>
         <a href="about">About</a>
-        <a href="contact">Contact</a>
-        <a href="fun">Something fun</a>
+        <a href="color">Color</a>
       </nav>
     )
   }
