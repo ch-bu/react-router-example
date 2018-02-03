@@ -1,2 +1,3 @@
-# react-router-example
-A simple example for react router
+# React Router Example
+
+A simple example to learn react router.
