@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './header.jsx';
 
 class Index extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class Index extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <h1>Index</h1>
       </div>
     )

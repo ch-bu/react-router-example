@@ -4,10 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import AppIndex from './components/index.jsx';
 import About from './components/about.jsx';
+import styles from '../scss/style.scss'
 
 class Application extends React.Component {
   constructor(props) {
     super(props);
+    //
   }
 
   render() {
