@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import AppIndex from './components/index.jsx';
+import About from './components/about.jsx';
 
 class Application extends React.Component {
   constructor(props) {
@@ -9,7 +12,12 @@ class Application extends React.Component {
 
   render() {
     return (
-      <h1>asdlf</h1>
+      <div>
+        <Switch>
+          <Route exact path='/' component={AppIndex} />
+          <Route path='/about' component={About} />
+        </Switch>
+      </div>
     )
   }
 }
