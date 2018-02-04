@@ -6,6 +6,7 @@ import AppIndex from './components/index.jsx';
 import About from './components/about.jsx';
 import Color from './components/color.jsx';
 import styles from '../scss/style.scss'
+import Header from './components/header.jsx';
 
 class Application extends React.Component {
   constructor(props) {
@@ -14,7 +15,9 @@ class Application extends React.Component {
 
   render() {
     return (
+
       <div>
+        <Header />
         <Switch>
           <Route exact path='/' component={AppIndex} />
           <Route path='/about' component={About} />

@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './header.jsx';
 import { Switch, Route } from 'react-router-dom';
 
 class ColorGeneral extends React.Component {
@@ -36,9 +35,7 @@ class Color extends React.Component {
   render() {
     return (
       <div>
-        <Header />
         <h1>Colors general page</h1>
-
         <Switch>
           <Route path='/color/:number' component={ColorSpecific} />
           <Route exact path='/color' component={ColorGeneral} />
