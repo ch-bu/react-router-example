@@ -30,16 +30,18 @@ class ColorSpecific extends React.Component {
 class Color extends React.Component {
   constructor(props) {
     super(props);
+
+    console.log(this.props.match.path);
   }
 
   render() {
+    let indexPage = this.props.match.url;
+
     return (
       <div>
         <h1>Colors general page</h1>
-        <Switch>
-          <Route exact path='/color' component={ColorGeneral} />
-          <Route path='/color/:number' component={ColorSpecific} />
-        </Switch>
+        <Route exact path={indexPage} component={ColorGeneral} />
+        <Route path={`/color/:id`} component={ColorSpecific}/>
       </div>
     )
   }

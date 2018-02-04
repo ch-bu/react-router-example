@@ -8,6 +8,20 @@ import Color from './components/color.jsx';
 import styles from '../scss/style.scss'
 import Header from './components/header.jsx';
 
+
+class Test extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+
+  render() {
+    return (
+      <p>{this.props.match.params.id}</p>
+    )
+  }
+}
+
 class Application extends React.Component {
   constructor(props) {
     super(props);
