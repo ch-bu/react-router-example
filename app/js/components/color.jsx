@@ -37,8 +37,8 @@ class Color extends React.Component {
       <div>
         <h1>Colors general page</h1>
         <Switch>
-          <Route path='/color/:number' component={ColorSpecific} />
           <Route exact path='/color' component={ColorGeneral} />
+          <Route path='/color/:number' component={ColorSpecific} />
         </Switch>
       </div>
     )
