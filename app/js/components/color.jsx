@@ -8,7 +8,9 @@ class ColorGeneral extends React.Component {
 
   render() {
     return (
-      <p>This is the parent color page</p>
+      <div>
+        <h2>Choose a color</h2>
+      </div>
     )
   }
 }
@@ -17,11 +19,14 @@ class ColorGeneral extends React.Component {
 class ColorSpecific extends React.Component {
   constructor(props) {
     super(props);
+
+    console.log(this.props.match);
   }
 
   render() {
     return (
-      <p>This is the specific color page</p>
+      <p style={{color: this.props.match.params.color, fontSize: '4rem'}}>
+        {this.props.match.params.color}</p>
     )
   }
 }
@@ -30,18 +35,29 @@ class ColorSpecific extends React.Component {
 class Color extends React.Component {
   constructor(props) {
     super(props);
-
-    console.log(this.props.match.path);
   }
 
   render() {
     let indexPage = this.props.match.url;
 
+    let colors = ['green', 'brown', 'blue', 'steelblue', 'orange',
+                  'darkblue', 'bisque', 'darkmagenta',
+                  'deeppink'];
+
+    let links = colors.map((color) => {
+      return <a href={indexPage + "/" + color} style={{backgroundColor: color}}>{color}</a>
+    });
+
+
     return (
       <div>
-        <h1>Colors general page</h1>
+        <h1>Colors</h1>
+        <div id="color-links">
+          {links}
+        </div>
+
+        <Route path={indexPage + '/:color'} component={ColorSpecific}/>
         <Route exact path={indexPage} component={ColorGeneral} />
-        <Route path={`/color/:id`} component={ColorSpecific}/>
       </div>
     )
   }

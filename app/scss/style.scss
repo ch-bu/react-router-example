@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: #e9edde;
+  background: linear-gradient(141deg, #fdfbfb 0%, #ebedee 100%);
+  min-height: 100vh;
 }
 
 #application {
@@ -21,6 +22,34 @@ body {
 
       &:hover {
         color: #e7e247;
+      }
+    }
+  }
+
+  main {
+    width: 60%;
+    margin: 0 auto 0 30%;
+    overflow: hidden;
+    min-height: 95vh;
+
+    #color-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      a {
+        position: relative;
+        height: 100%;
+        width: 20%;
+        color: #fff;
+        text-decoration: none;
+        margin: 10px 10px 10px 0;
+        padding: 20px;
+        text-align: center;
+
+        &:hover {
+          opacity: .7;
+        }
       }
     }
   }

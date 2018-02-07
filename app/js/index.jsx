@@ -29,14 +29,16 @@ class Application extends React.Component {
 
   render() {
     return (
-
       <div>
         <Header />
-        <Switch>
-          <Route exact path='/' component={AppIndex} />
-          <Route path='/about' component={About} />
-          <Route path='/color' component={Color} />
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path='/' component={AppIndex} />
+            <Route path='/about' component={About} />
+            <Route path='/(color|colour)/' component={Color} />
+          </Switch>
+        </main>
+
       </div>
     )
   }
